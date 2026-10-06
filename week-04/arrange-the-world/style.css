@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  background-color: #0b1020;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+header {
+  text-align: center;
+  padding: 30px;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+/* Main */
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Solar System */
+
+.solar-system {
+  position: relative;
+  height: 750px;
+  margin: 20px;
+  border: 1px solid #30384f;
+}
+
+/* Sun */
+
+.sun {
+  position: absolute;
+  left: 45%;
+  bottom: 40px;
+  text-align: center;
+}
+
+.sun-shape {
+  width: 130px;
+  height: 130px;
+  background-color: #f5c542;
+  border-radius: 50%;
+}
+
+/* General Planet */
+
+.planet {
+  position: absolute;
+  text-align: center;
+}
+
+.planet p,
+.sun p,
+.moon p {
+  margin-top: 5px;
+}
+
+/* Mercury */
+
+.mercury {
+  left: 40%;
+  bottom: 210px;
+}
+
+.mercury-shape {
+  width: 30px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+/* Venus */
+
+.venus {
+  left: 28%;
+  bottom: 280px;
+}
+
+.venus-shape {
+  width: 45px;
+  height: 45px;
+  background-color: #d99b59;
+  border-radius: 50%;
+}
+
+/* Earth */
+
+.earth {
+  left: 48%;
+  bottom: 320px;
+}
+
+.earth-shape {
+  width: 50px;
+  height: 50px;
+  background-color: #4b88c7;
+  border: 5px solid #67a66d;
+  border-radius: 50%;
+}
+
+/* Moon */
+
+.moon {
+  position: absolute;
+  left: 56.5%;
+  bottom: 350px;
+  text-align: center;
+}
+
+.moon-shape {
+  width: 18px;
+  height: 18px;
+  background-color: lightgray;
+  border-radius: 50%;
+}
+
+.moon p {
+  font-size: 11px;
+}
+
+/* Mars */
+
+.mars {
+  right: 25%;
+  bottom: 350px;
+}
+
+.mars-shape {
+  width: 38px;
+  height: 38px;
+  background-color: #b65745;
+  border-radius: 50%;
+}
+
+/* Jupiter */
+
+.jupiter {
+  left: 12%;
+  top: 250px;
+}
+
+.jupiter-shape {
+  width: 90px;
+  height: 90px;
+  background-color: #c89b73;
+  border-radius: 50%;
+}
+
+/* Saturn */
+
+.saturn {
+  right: 15%;
+  top: 190px;
+}
+
+.saturn-shape {
+  width: 75px;
+  height: 75px;
+  background-color: #d5bd82;
+  border: 8px solid #a8895d;
+  border-radius: 50%;
+}
+
+/* Uranus */
+
+.uranus {
+  left: 25%;
+  top: 90px;
+}
+
+.uranus-shape {
+  width: 55px;
+  height: 55px;
+  background-color: #8cc5ca;
+  border-radius: 50%;
+}
+
+/* Neptune */
+
+.neptune {
+  right: 8%;
+  top: 50px;
+}
+
+.neptune-shape {
+  width: 55px;
+  height: 55px;
+  background-color: #4d6fc0;
+  border-radius: 50%;
+}
+
+/* Stars */
+
+.star {
+  position: absolute;
+  color: white;
+}
+
+.star1 {
+  left: 8%;
+  top: 70px;
+}
+
+.star2 {
+  left: 50%;
+  top: 120px;
+}
+
+.star3 {
+  right: 30%;
+  top: 250px;
+}
+
+.star4 {
+  right: 8%;
+  bottom: 180px;
+}
