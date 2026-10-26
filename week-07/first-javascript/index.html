@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Wardrobe</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Little Wardrobe</h1>
+
+      <div class="wardrobe">
+        <div class="wardrobe-top"></div>
+        <div class="wardrobe-inside">
+          <div class="section shirts-section">
+            <div class="rail"></div>
+            <div class="clothes-row">
+              <div class="clothing">
+                <svg class="hanger" viewBox="0 0 64 48" aria-hidden="true">
+                  <path
+                    d="M32 17 L32 11 C32 5 36 3 41 3 C47 3 48 11 42 16 M32 17 L9 34 Q7 37 11 37 L53 37 Q57 37 55 34 Z"
+                  />
+                </svg>
+                <div class="tshirt shirt-blue"></div>
+              </div>
+              <div class="clothing">
+                <svg class="hanger" viewBox="0 0 64 48" aria-hidden="true">
+                  <path
+                    d="M32 17 L32 11 C32 5 36 3 41 3 C47 3 48 11 42 16 M32 17 L9 34 Q7 37 11 37 L53 37 Q57 37 55 34 Z"
+                  />
+                </svg>
+                <div class="tshirt shirt-pink"></div>
+              </div>
+              <div class="clothing">
+                <svg class="hanger" viewBox="0 0 64 48" aria-hidden="true">
+                  <path
+                    d="M32 17 L32 11 C32 5 36 3 41 3 C47 3 48 11 42 16 M32 17 L9 34 Q7 37 11 37 L53 37 Q57 37 55 34 Z"
+                  />
+                </svg>
+                <div class="tshirt shirt-lilac"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section shelf-section">
+            <div class="folded-clothes">
+              <span class="fold fold-blue"></span>
+              <span class="fold fold-white"></span>
+              <span class="fold fold-pink"></span>
+            </div>
+            <div class="bear">
+              <span class="bear-ear ear-left"></span>
+              <span class="bear-ear ear-right"></span>
+              <div class="bear-head">
+                <span class="eye eye-left"></span>
+                <span class="eye eye-right"></span>
+                <span class="nose"></span>
+              </div>
+              <div class="bear-body"></div>
+            </div>
+            <div class="basket"><span class="basket-handle"></span></div>
+          </div>
+
+          <div class="section pants-section">
+            <div class="rail bottom-rail"></div>
+            <div class="pants-row">
+              <div class="clothing trousers">
+                <svg
+                  class="hanger pants-hanger"
+                  viewBox="0 0 64 48"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M32 17 L32 11 C32 5 36 3 41 3 C47 3 48 11 42 16 M32 17 L9 34 Q7 37 11 37 L53 37 Q57 37 55 34 Z"
+                  />
+                </svg>
+                <div class="pants pants-lavender"></div>
+              </div>
+              <div class="clothing trousers">
+                <svg
+                  class="hanger pants-hanger"
+                  viewBox="0 0 64 48"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M32 17 L32 11 C32 5 36 3 41 3 C47 3 48 11 42 16 M32 17 L9 34 Q7 37 11 37 L53 37 Q57 37 55 34 Z"
+                  />
+                </svg>
+                <div class="pants pants-rose"></div>
+              </div>
+            </div>
+            <div class="books">
+              <span class="book book-pink"></span>
+              <span class="book book-cream"></span>
+              <span class="book book-blue"></span>
+              <span class="book book-lavender"></span>
+              <span class="book book-mint"></span>
+              <span class="book book-ivory"></span>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="door left-door"
+          id="left-door"
+          type="button"
+          aria-label="Open left door"
+          aria-expanded="false"
+        >
+          <span class="door-panel"></span><span class="handle"></span>
+        </button>
+        <button
+          class="door right-door"
+          id="right-door"
+          type="button"
+          aria-label="Open right door"
+          aria-expanded="false"
+        >
+          <span class="door-panel"></span><span class="handle"></span>
+        </button>
+        <div class="leg leg-left"></div>
+        <div class="leg leg-right"></div>
+      </div>
+
+      <p class="hint">Click each door to open or close it.</p>
+    </main>
+  </body>
+</html>
