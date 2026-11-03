@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif&display=swap');
+
+:root {
+  --background: #f7f6f3;
+  --surface: #ffffff;
+  --text: #302b28;
+  --muted: #77736f;
+  --border: #e5e2de;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 75px 36px 100px;
+}
+
+/* Page title */
+
+.intro {
+  margin-bottom: 65px;
+}
+
+.intro h1 {
+  margin: 0;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(52px, 7vw, 82px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Collection */
+
+.collection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.collection h2 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+.controls button {
+  padding: 11px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.controls button:hover {
+  background: #eeece8;
+  border-color: #bfbab4;
+}
+
+.controls button:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* Card layout */
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.note-card {
+  display: block;
+  width: 100%;
+  height: 390px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  perspective: 1200px;
+  transition: transform 0.2s ease;
+}
+
+.note-card:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 5px;
+  border-radius: 12px;
+}
+
+.card-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.65s ease;
+}
+
+/* Flip interaction */
+
+.note-card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* Front */
+
+.card-front {
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid var(--accent);
+}
+
+.front-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.note-orb {
+  display: block;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 25%,
+    rgba(255, 255, 255, 0.95),
+    var(--accent)
+  );
+  box-shadow: 0 10px 30px rgba(48, 43, 40, 0.09);
+}
+
+.note-name {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+/* Back */
+
+.card-back {
+  gap: 11px;
+  transform: rotateY(180deg);
+  border-top: 3px solid var(--accent);
+}
+
+.back-title {
+  margin-bottom: 3px;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.back-summary {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.back-section-label {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.back-reference {
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.descriptor-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.descriptor-tag {
+  padding: 5px 8px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .card-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 50px 22px 70px;
+  }
+
+  .intro {
+    margin-bottom: 45px;
+  }
+
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+
+  .note-card {
+    height: 370px;
+  }
+
+  .collection-header {
+    align-items: flex-start;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .card-inner,
+  .controls button {
+    transition: none;
+  }
+}
+.note-card:hover {
+  transform: translateY(-3px);
+}
