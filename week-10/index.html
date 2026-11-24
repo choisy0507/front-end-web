@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Same Amount, Different Day</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Same Amount, Different Day</h1>
+    <p>Compare exchange rates across two dates.</p>
+
+    <form id="form" novalidate>
+      <label for="pair">Currency</label>
+      <select id="pair">
+        <option value="USD-KRW">USD → KRW</option>
+        <option value="EUR-KRW">EUR → KRW</option>
+        <option value="USD-JPY">USD → JPY</option>
+      </select>
+
+      <label for="amount">Amount</label>
+      <input id="amount" type="number" value="100" step="any">
+
+      <label for="date">Past date</label>
+      <input id="date" type="date" min="1999-01-04">
+      <div class="shortcuts">
+        <button type="button" data-years="1">1 year ago</button>
+        <button type="button" data-years="3">3 years ago</button>
+      </div>
+
+      <button type="submit">Compare</button>
+    </form>
+
+    <p id="status" role="status"></p>
+
+    <section id="results" hidden>
+      <h2>Then <span id="then-date"></span></h2>
+      <p id="then-value" class="value"></p>
+
+      <h2>Latest <span id="latest-date"></span></h2>
+      <p id="latest-value" class="value"></p>
+
+      <h2>Difference</h2>
+      <p id="difference" class="value"></p>
+      <p id="summary"></p>
+    </section>
+
+    <footer>
+      Source: <a href="https://frankfurter.dev/">Frankfurter</a> (ECB reference rates).
+    </footer>
+  </main>
+</body>
+</html>
