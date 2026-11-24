@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the differences and connections between the words we use to describe scent.">
+  <meta name="theme-color" content="#f7f6f3">
+  <title>Descriptor Compare — The Language of Scent</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#compare-form">Skip to the comparison</a>
+  <header class="wrap site-header">
+    <h1>Descriptor <em>Compare</em></h1>
+  </header>
+  <main class="wrap">
+    <form id="compare-form" tabindex="-1">
+      <div class="section-top"><p class="help">Choose two words to compare.</p><button class="text-button" type="reset">Reset <span aria-hidden="true">↺</span></button></div>
+      <div class="selection-layout">
+        <fieldset aria-describedby="first-help">
+          <legend><span class="step">01</span> Choose a starting point</legend>
+          <p class="help" id="first-help">Pick a word you want to understand.</p>
+          <div class="descriptor-grid" id="first-options"></div>
+        </fieldset>
+        <fieldset aria-describedby="second-help">
+          <legend><span class="step">02</span> Find a comparison</legend>
+          <p class="help" id="second-help">Choose a word in step 01 first.</p>
+          <div class="descriptor-grid" id="second-options"></div>
+        </fieldset>
+      </div>
+      <div class="action-row">
+        <p id="selection-status" role="status" aria-live="polite" aria-atomic="true">Start with a descriptor in step 01.</p>
+        <button class="button-solid" id="compare-button" type="submit" disabled>Compare descriptors <span aria-hidden="true">↗</span></button>
+      </div>
+    </form>
+    <noscript><p class="noscript">This comparison needs JavaScript. Enable it to choose descriptors and see their connections.</p></noscript>
+
+    <section class="result" id="result" aria-labelledby="result-heading" hidden>
+      <div class="result-top">
+        <div>
+          <p class="eyebrow">VISUAL COMPARISON</p>
+          <h2 id="result-heading" tabindex="-1"></h2>
+          <p id="difference-summary"></p>
+        </div>
+        <button class="text-button" type="button" id="back-button">← Change comparison</button>
+      </div>
+      <div class="visual-comparison">
+        <article class="sensory-panel" id="detail-a"></article>
+        <article class="sensory-panel" id="detail-b"></article>
+      </div>
+      <section class="connection" aria-labelledby="connection-heading">
+        <div class="connection-title">
+          <h3 id="connection-heading">How They Connect</h3>
+          <span class="eyebrow" id="relation-type"></span>
+        </div>
+        <div class="connection-layout">
+          <div id="relation-diagram" aria-hidden="true"></div>
+          <div class="connection-copy">
+            <p id="relation-copy"></p>
+          </div>
+        </div>
+        <p class="concept-note">Visuals suggest impressions; examples evoke familiar smells.</p>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
