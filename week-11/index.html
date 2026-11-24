@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NYC Subway: Weekday vs. Weekend</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="date">October 2025</p>
+      <h1>NYC Subway: Weekday vs. Weekend</h1>
+      <p class="intro">Daily average entries at the top 20 stations by weekday ridership.</p>
+    </header>
+
+    <section aria-labelledby="chart-title">
+      <div class="chart-top">
+        <h2 id="chart-title">Average entries per day</h2>
+        <div class="buttons" role="group" aria-label="Sort stations">
+          <button type="button" id="sort-weekday" aria-pressed="true" disabled>Most weekday entries</button>
+          <button type="button" id="sort-drop" aria-pressed="false" disabled>Biggest weekend drop (%)</button>
+        </div>
+      </div>
+      <p id="sort-status" class="sort-status" role="status">Loading data…</p>
+      <ol id="chart" class="chart" aria-label="Station comparisons"></ol>
+      <noscript><p>This page needs JavaScript. You can also <a href="stations.csv">read the data as a CSV file</a>.</p></noscript>
+    </section>
+
+    <footer>
+      <h2>Data notes</h2>
+      <p>Source: <a href="https://data.ny.gov/d/5wq4-mkjj">MTA hourly ridership estimates</a> · October 2025 · 23 weekdays / 8 weekend days. Counts represent entries, not individual riders.</p>
+      <p id="flushing-note">* Flushing-Main St: October 25–26 excluded due to track work; weekend average based on 6 days. <a href="https://www.mta.info/article/mta-weekender-october-24-27-2025">Service notice</a>.</p>
+      <p>Stations outside the weekday top 20 are not shown.</p>
+    </footer>
+  </main>
+</body>
+</html>
